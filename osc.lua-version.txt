@@ -1,0 +1,1 @@
+https://raw.githubusercontent.com/mpv-player/mpv/69fb2ddbc7b8ccec31348be4b7357ad9a8d48896/player/lua/osc.lua
