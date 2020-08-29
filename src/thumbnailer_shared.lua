@@ -373,6 +373,16 @@ function Thumbnailer:prepare_source_path()
 end
 
 function Thumbnailer:start_worker_jobs()
+    -- automatata added
+    -- Notify thumbnail cleaner the directory
+    mp.commandv(
+        "script-message-to",
+        "mpv_thumbnail_script_cleaner",
+        "mpv_thumbnail_script-directory",
+        self.state.thumbnail_directory
+    )
+    -- End automatata added
+
     -- Create directory for the thumbnails, if needed
     local l, err = utils.readdir(self.state.thumbnail_directory)
     if err then
